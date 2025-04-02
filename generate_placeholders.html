@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Placeholder Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2563eb;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .image-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+        }
+        canvas {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #1e40af;
+        }
+        .download-all {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        p {
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <h1>DevOps Portfolio Placeholder Image Generator</h1>
+    <p>Use this tool to generate placeholder images for your portfolio. Click on each "Generate" button to create a placeholder, then "Download" to save it to your computer. Place these files in the appropriate folders as specified in the required_photos.txt file.</p>
+    
+    <div class="image-container">
+        <h2>Profile Photo (400x500)</h2>
+        <canvas id="profileCanvas" width="400" height="500"></canvas>
+        <button onclick="generateProfileImage()">Generate</button>
+        <button onclick="downloadImage('profileCanvas', 'profile.jpg')">Download</button>
+    </div>
+
+    <div class="image-container">
+        <h2>Project 1: Multi-Cloud CI/CD Pipeline (600x400)</h2>
+        <canvas id="project1Canvas" width="600" height="400"></canvas>
+        <button onclick="generateProjectImage('project1Canvas', 'CI/CD Pipeline')">Generate</button>
+        <button onclick="downloadImage('project1Canvas', 'project1.jpg')">Download</button>
+    </div>
+
+    <div class="image-container">
+        <h2>Project 2: Kubernetes Operator (600x400)</h2>
+        <canvas id="project2Canvas" width="600" height="400"></canvas>
+        <button onclick="generateProjectImage('project2Canvas', 'Kubernetes Operator')">Generate</button>
+        <button onclick="downloadImage('project2Canvas', 'project2.jpg')">Download</button>
+    </div>
+
+    <div class="image-container">
+        <h2>Project 3: Serverless Architecture (600x400)</h2>
+        <canvas id="project3Canvas" width="600" height="400"></canvas>
+        <button onclick="generateProjectImage('project3Canvas', 'Serverless Architecture')">Generate</button>
+        <button onclick="downloadImage('project3Canvas', 'project3.jpg')">Download</button>
+    </div>
+
+    <div class="image-container">
+        <h2>Project 4: GitOps Framework (600x400)</h2>
+        <canvas id="project4Canvas" width="600" height="400"></canvas>
+        <button onclick="generateProjectImage('project4Canvas', 'GitOps Framework')">Generate</button>
+        <button onclick="downloadImage('project4Canvas', 'project4.jpg')">Download</button>
+    </div>
+
+    <div class="image-container">
+        <h2>Project 5: Monitoring Dashboard (600x400)</h2>
+        <canvas id="project5Canvas" width="600" height="400"></canvas>
+        <button onclick="generateProjectImage('project5Canvas', 'Monitoring Dashboard')">Generate</button>
+        <button onclick="downloadImage('project5Canvas', 'project5.jpg')">Download</button>
+    </div>
+
+    <div class="image-container">
+        <h2>Project 6: Auto-scaling Platform (600x400)</h2>
+        <canvas id="project6Canvas" width="600" height="400"></canvas>
+        <button onclick="generateProjectImage('project6Canvas', 'Auto-scaling Platform')">Generate</button>
+        <button onclick="downloadImage('project6Canvas', 'project6.jpg')">Download</button>
+    </div>
+
+    <div class="image-container">
+        <h2>Hero Background (1200x600)</h2>
+        <canvas id="heroBgCanvas" width="1200" height="600"></canvas>
+        <button onclick="generateHeroBackground()">Generate</button>
+        <button onclick="downloadImage('heroBgCanvas', 'hero-bg.jpg')">Download</button>
+    </div>
+
+    <div class="image-container">
+        <h2>Pattern Background (500x500)</h2>
+        <canvas id="patternCanvas" width="500" height="500"></canvas>
+        <button onclick="generatePattern()">Generate</button>
+        <button onclick="downloadImage('patternCanvas', 'pattern.jpg')">Download</button>
+    </div>
+
+    <button class="download-all" onclick="generateAll()">Generate All Images</button>
+
+    <script>
+        function getRandomColor() {
+            const colors = [
+                '#2563eb', '#1e40af', '#3b82f6', '#60a5fa', '#93c5fd',
+                '#10b981', '#059669', '#34d399', '#6ee7b7', '#a7f3d0',
+                '#f59e0b', '#d97706', '#fbbf24', '#fcd34d', '#fde68a'
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function generateProfileImage() {
+            const canvas = document.getElementById('profileCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#f0f9ff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Head shape
+            ctx.fillStyle = '#e2e8f0';
+            ctx.beginPath();
+            ctx.arc(canvas.width/2, 180, 100, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Body shape
+            ctx.fillStyle = '#e2e8f0';
+            ctx.beginPath();
+            ctx.moveTo(canvas.width/2 - 80, 250);
+            ctx.lineTo(canvas.width/2 + 80, 250);
+            ctx.lineTo(canvas.width/2 + 100, 500);
+            ctx.lineTo(canvas.width/2 - 100, 500);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Text
+            ctx.fillStyle = '#2563eb';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('DevOps Engineer', canvas.width/2, 350);
+            
+            ctx.fillStyle = '#1e293b';
+            ctx.font = '18px Arial';
+            ctx.fillText('Profile Photo', canvas.width/2, 380);
+            ctx.fillText('400 x 500', canvas.width/2, 410);
+        }
+
+        function generateProjectImage(canvasId, projectName) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#f0f9ff');
+            gradient.addColorStop(1, '#e0f2fe');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw some shapes to represent a project
+            for (let i = 0; i < 5; i++) {
+                ctx.fillStyle = getRandomColor();
+                const size = 30 + Math.random() * 70;
+                const x = Math.random() * (canvas.width - size);
+                const y = Math.random() * (canvas.height - size);
+                
+                if (Math.random() > 0.5) {
+                    ctx.beginPath();
+                    ctx.arc(x + size/2, y + size/2, size/2, 0, Math.PI * 2);
+                    ctx.fill();
+                } else {
+                    ctx.fillRect(x, y, size, size);
+                }
+            }
+            
+            // Add some lines to represent connections
+            ctx.strokeStyle = '#2563eb';
+            ctx.lineWidth = 3;
+            for (let i = 0; i < 8; i++) {
+                ctx.beginPath();
+                ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+                ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+                ctx.stroke();
+            }
+            
+            // Add text overlay
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.fillRect(0, canvas.height - 80, canvas.width, 80);
+            
+            ctx.fillStyle = '#2563eb';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(projectName, canvas.width/2, canvas.height - 45);
+            
+            ctx.fillStyle = '#1e293b';
+            ctx.font = '16px Arial';
+            ctx.fillText('600 x 400', canvas.width/2, canvas.height - 20);
+        }
+
+        function generateHeroBackground() {
+            const canvas = document.getElementById('heroBgCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#f0f9ff');
+            gradient.addColorStop(1, '#e0f2fe');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Add some tech-related patterns
+            for (let i = 0; i < 50; i++) {
+                ctx.fillStyle = `rgba(37, 99, 235, ${Math.random() * 0.1 + 0.05})`;
+                const size = 20 + Math.random() * 100;
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                
+                if (Math.random() > 0.7) {
+                    // Circles
+                    ctx.beginPath();
+                    ctx.arc(x, y, size/2, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if (Math.random() > 0.5) {
+                    // Squares
+                    ctx.fillRect(x, y, size, size);
+                } else {
+                    // Hexagons
+                    drawHexagon(ctx, x, y, size/2);
+                }
+            }
+            
+            // Add some connecting lines
+            ctx.strokeStyle = 'rgba(37, 99, 235, 0.1)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i < 30; i++) {
+                ctx.beginPath();
+                ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+                ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+                ctx.stroke();
+            }
+        }
+
+        function drawHexagon(ctx, x, y, size) {
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+                const angle = (Math.PI / 3) * i;
+                const hx = x + size * Math.cos(angle);
+                const hy = y + size * Math.sin(angle);
+                if (i === 0) {
+                    ctx.moveTo(hx, hy);
+                } else {
+                    ctx.lineTo(hx, hy);
+                }
+            }
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        function generatePattern() {
+            const canvas = document.getElementById('patternCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#f8fafc';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Create a subtle pattern
+            const patternSize = 20;
+            ctx.strokeStyle = 'rgba(37, 99, 235, 0.1)';
+            ctx.lineWidth = 1;
+            
+            // Horizontal lines
+            for (let y = 0; y < canvas.height; y += patternSize) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            }
+            
+            // Vertical lines
+            for (let x = 0; x < canvas.width; x += patternSize) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+            
+            // Add some dots at intersections
+            ctx.fillStyle = 'rgba(37, 99, 235, 0.2)';
+            for (let x = 0; x < canvas.width; x += patternSize) {
+                for (let y = 0; y < canvas.height; y += patternSize) {
+                    if (Math.random() > 0.7) {
+                        ctx.beginPath();
+                        ctx.arc(x, y, 2, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+            }
+        }
+
+        function downloadImage(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/jpeg', 0.8);
+            link.click();
+        }
+
+        function generateAll() {
+            generateProfileImage();
+            generateProjectImage('project1Canvas', 'CI/CD Pipeline');
+            generateProjectImage('project2Canvas', 'Kubernetes Operator');
+            generateProjectImage('project3Canvas', 'Serverless Architecture');
+            generateProjectImage('project4Canvas', 'GitOps Framework');
+            generateProjectImage('project5Canvas', 'Monitoring Dashboard');
+            generateProjectImage('project6Canvas', 'Auto-scaling Platform');
+            generateHeroBackground();
+            generatePattern();
+        }
+
+        // Generate all images when page loads
+        window.onload = generateAll;
+    </script>
+</body>
+</html> 

@@ -1,0 +1,75 @@
+Required Photos for DevOps Engineer Portfolio
+=============================================
+
+1. Profile Photo:
+   - File: assets/images/profile/profile.jpg
+   - Size: Recommended 400x500px
+   - Description: Professional headshot or portrait photo
+   - Purpose: Used in the About Me section
+
+2. Project Screenshots:
+   - File: assets/images/projects/project1.jpg
+   - Size: Recommended 600x400px
+   - Description: Screenshot or illustration of Multi-Cloud CI/CD Pipeline
+   - Purpose: Used in Projects section
+
+   - File: assets/images/projects/project2.jpg
+   - Size: Recommended 600x400px
+   - Description: Screenshot or illustration of Kubernetes Operator for Database Management
+   - Purpose: Used in Projects section
+
+   - File: assets/images/projects/project3.jpg
+   - Size: Recommended 600x400px
+   - Description: Screenshot or illustration of Serverless Microservices Architecture
+   - Purpose: Used in Projects section
+
+   - File: assets/images/projects/project4.jpg
+   - Size: Recommended 600x400px
+   - Description: Screenshot or illustration of GitOps Deployment Framework
+   - Purpose: Used in Projects section
+
+   - File: assets/images/projects/project5.jpg
+   - Size: Recommended 600x400px
+   - Description: Screenshot or illustration of Infrastructure Monitoring Dashboard
+   - Purpose: Used in Projects section
+
+   - File: assets/images/projects/project6.jpg
+   - Size: Recommended 600x400px
+   - Description: Screenshot or illustration of Auto-scaling Microservices Platform
+   - Purpose: Used in Projects section
+
+3. Optional Background Images:
+   - File: assets/images/background/hero-bg.jpg
+   - Size: Recommended 1920x1080px
+   - Description: Abstract or tech-related background for hero section
+   - Purpose: Can be used as a background for the hero section
+
+   - File: assets/images/background/pattern.jpg
+   - Size: Recommended 500x500px (tileable)
+   - Description: Subtle pattern or texture
+   - Purpose: Can be used for section backgrounds
+
+Image Guidelines:
+----------------
+1. Use high-quality, professional images
+2. Ensure images are properly compressed for web use
+3. For project screenshots, use actual screenshots of your work if possible
+4. If using stock photos, ensure you have proper licensing
+5. Keep file sizes reasonable (under 300KB per image is recommended)
+6. Use JPG format for photos and screenshots, PNG for images requiring transparency
+
+Where to Find Images:
+-------------------
+1. Your own screenshots for projects
+2. Professional photographer for profile photo
+3. Stock photo sites for backgrounds:
+   - Unsplash (https://unsplash.com/) - Free high-quality photos
+   - Pexels (https://www.pexels.com/) - Free stock photos
+   - Pixabay (https://pixabay.com/) - Free images and royalty-free stock
+
+4. For DevOps-related illustrations:
+   - AWS Architecture Icons
+   - Google Cloud Icons
+   - Azure Icons
+   - Kubernetes Icons
+   - Docker Icons 
