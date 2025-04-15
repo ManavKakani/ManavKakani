@@ -240,6 +240,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         }, 500);
     });
+
+    // Initialize progress circles
+    document.querySelectorAll('.skill-progress-circle').forEach(circle => {
+        const progress = circle.dataset.progress;
+        const progressCircle = circle.querySelector('.progress-ring-circle');
+        const circumference = 339.292;
+        progressCircle.style.setProperty('--progress', progress / 100);
+    });
+
+    // Initialize skill bars
+    document.querySelectorAll('.skill-bar').forEach(bar => {
+        const level = bar.dataset.level;
+        const fill = bar.querySelector('.skill-bar-fill');
+        fill.style.setProperty('--level', level + '%');
+    });
 });
 
 // Form submission handling
