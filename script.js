@@ -80,6 +80,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Blog filtering
+    const blogTabButtons = document.querySelectorAll('.blog-tabs .tab-btn');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    blogTabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            blogTabButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const sourceValue = this.getAttribute('data-source');
+            
+            blogCards.forEach(card => {
+                if (sourceValue === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.getAttribute('data-source') === sourceValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+
     // Animate skill bars on scroll
     const skillSections = document.querySelectorAll('.skill-progress');
     
@@ -127,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animate elements on scroll
     const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.timeline-item, .project-card, .skill-category, .education-item');
+        const elements = document.querySelectorAll('.timeline-item, .project-card, .skill-category, .education-item, .blog-card');
         
         elements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
@@ -142,38 +170,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add animation class to CSS
     const style = document.createElement('style');
     style.textContent = `
-        .timeline-item, .project-card, .skill-category, .education-item {
+        .timeline-item, .project-card, .skill-category, .education-item, .blog-card {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
         
-        .timeline-item.animate, .project-card.animate, .skill-category.animate, .education-item.animate {
+        .timeline-item.animate, .project-card.animate, .skill-category.animate, .education-item.animate, .blog-card.animate {
             opacity: 1;
             transform: translateY(0);
         }
         
-        .timeline-item:nth-child(1), .project-card:nth-child(1), .skill-category:nth-child(1), .education-item:nth-child(1) {
+        .timeline-item:nth-child(1), .project-card:nth-child(1), .skill-category:nth-child(1), .education-item:nth-child(1), .blog-card:nth-child(1) {
             transition-delay: 0.1s;
         }
         
-        .timeline-item:nth-child(2), .project-card:nth-child(2), .skill-category:nth-child(2), .education-item:nth-child(2) {
+        .timeline-item:nth-child(2), .project-card:nth-child(2), .skill-category:nth-child(2), .education-item:nth-child(2), .blog-card:nth-child(2) {
             transition-delay: 0.2s;
         }
         
-        .timeline-item:nth-child(3), .project-card:nth-child(3), .skill-category:nth-child(3), .education-item:nth-child(3) {
+        .timeline-item:nth-child(3), .project-card:nth-child(3), .skill-category:nth-child(3), .education-item:nth-child(3), .blog-card:nth-child(3) {
             transition-delay: 0.3s;
         }
         
-        .timeline-item:nth-child(4), .project-card:nth-child(4), .skill-category:nth-child(4), .education-item:nth-child(4) {
+        .timeline-item:nth-child(4), .project-card:nth-child(4), .skill-category:nth-child(4), .education-item:nth-child(4), .blog-card:nth-child(4) {
             transition-delay: 0.4s;
         }
         
-        .timeline-item:nth-child(5), .project-card:nth-child(5), .skill-category:nth-child(5), .education-item:nth-child(5) {
+        .timeline-item:nth-child(5), .project-card:nth-child(5), .skill-category:nth-child(5), .education-item:nth-child(5), .blog-card:nth-child(5) {
             transition-delay: 0.5s;
         }
         
-        .timeline-item:nth-child(6), .project-card:nth-child(6), .skill-category:nth-child(6), .education-item:nth-child(6) {
+        .timeline-item:nth-child(6), .project-card:nth-child(6), .skill-category:nth-child(6), .education-item:nth-child(6), .blog-card:nth-child(6) {
             transition-delay: 0.6s;
         }
     `;
