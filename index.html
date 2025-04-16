@@ -11,7 +11,7 @@
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init("YOUR_PUBLIC_KEY");
+            emailjs.init("awP9Lv_nECrjeonof");
         })();
     </script>
 </head>
@@ -84,7 +84,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-container">
-                        <img src="assets/images/profile/profile.jpg" alt="Profile Picture">
+                        <img src="assets/images/profile/profile.jpeg" alt="Profile Picture">
                     </div>
                 </div>
                 <div class="about-text">
@@ -97,7 +97,7 @@
                         </div>
                         <div class="info-item">
                             <span class="info-title">Email:</span>
-                            <span class="info-value">manav642k@gmail.com</span>
+                            <span class="info-value">manavkakani.pro@gmail.com</span>
                         </div>
                         <div class="info-item">
                             <span class="info-title">Phone:</span>
@@ -108,7 +108,7 @@
                             <span class="info-value">github.com/ManavKakani</span>
                         </div>
                     </div>
-                    <a href="#" class="btn primary-btn">Download Resume</a>
+                    <a href="manav-kakani-devops.pdf" download class="btn primary-btn" target="_blank">Download Resume</a>
                 </div>
             </div>
         </div>
@@ -163,48 +163,7 @@
                     </div>
                 </div>
 
-                <!-- Professional Skills -->
-                <div class="skills-category">
-                    <div class="category-header">
-                        <i class="fas fa-user-tie"></i>
-                        <h3>Professional Skills</h3>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-comments"></i>
-                            </div>
-                            <h4>Communication</h4>
-                            <div class="skill-tags">
-                                <span class="tag">Team Collaboration</span>
-                                <span class="tag">Clear Expression</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-sync-alt"></i>
-                            </div>
-                            <h4>Adaptability</h4>
-                            <div class="skill-tags">
-                                <span class="tag">Quick Learning</span>
-                                <span class="tag">Flexibility</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h4>Team Work</h4>
-                            <div class="skill-tags">
-                                <span class="tag">Leadership</span>
-                                <span class="tag">Collaboration</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                
                 <!-- Tools & Technologies -->
                 <div class="skills-category">
                     <div class="category-header">
@@ -259,6 +218,48 @@
                         <div class="tool-item">
                             <i class="fas fa-network-wired"></i>
                             <span>Networking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Skills -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Professional Skills</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Communication</h4>
+                            <div class="skill-tags">
+                                <span class="tag">Team Collaboration</span>
+                                <span class="tag">Clear Expression</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h4>Adaptability</h4>
+                            <div class="skill-tags">
+                                <span class="tag">Quick Learning</span>
+                                <span class="tag">Flexibility</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Team Work</h4>
+                            <div class="skill-tags">
+                                <span class="tag">Leadership</span>
+                                <span class="tag">Collaboration</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -380,115 +381,26 @@
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="cloud">Cloud</button>
+                <button class="filter-btn" data-filter="integration">Integration</button>
                 <button class="filter-btn" data-filter="automation">Automation</button>
-                <button class="filter-btn" data-filter="kubernetes">Kubernetes</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="cloud automation">
+                <div class="project-card" data-category="cloud integration automation">
                     <div class="project-img">
-                        <img src="assets/images/projects/project1.jpg" alt="Multi-Cloud CI/CD Pipeline">
+                        <img src="assets/images/projects/box-integration.jpg" alt="Box Integration">
                     </div>
                     <div class="project-info">
-                        <h3>Multi-Cloud CI/CD Pipeline</h3>
-                        <p>Designed and implemented a CI/CD pipeline that works across AWS, GCP, and Azure using Jenkins, Terraform, and Kubernetes.</p>
+                        <h3>Box Integration Tools</h3>
+                        <p>Python scripts to sync files from Box to different cloud storage services like AWS S3 and Azure Blob Storage with continuous monitoring and event-based synchronization.</p>
                         <div class="project-tech">
-                            <span>Jenkins</span>
-                            <span>Terraform</span>
-                            <span>Multi-Cloud</span>
+                            <span>Python</span>
+                            <span>AWS S3</span>
+                            <span>Azure Blob</span>
+                            <span>Box API</span>
+                            <span>Event Hub</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="kubernetes automation">
-                    <div class="project-img">
-                        <img src="assets/images/projects/project2.jpg" alt="Kubernetes Operator for Database Management">
-                    </div>
-                    <div class="project-info">
-                        <h3>Kubernetes Operator for Database Management</h3>
-                        <p>Created a custom Kubernetes operator to automate database provisioning, backups, and scaling operations.</p>
-                        <div class="project-tech">
-                            <span>Kubernetes</span>
-                            <span>Go</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="cloud">
-                    <div class="project-img">
-                        <img src="assets/images/projects/project3.jpg" alt="Serverless Microservices Architecture">
-                    </div>
-                    <div class="project-info">
-                        <h3>Serverless Microservices Architecture</h3>
-                        <p>Implemented a serverless architecture using AWS Lambda, API Gateway, and DynamoDB for a high-traffic e-commerce application.</p>
-                        <div class="project-tech">
-                            <span>AWS Lambda</span>
-                            <span>Serverless</span>
-                            <span>DynamoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="automation kubernetes">
-                    <div class="project-img">
-                        <img src="assets/images/projects/project4.jpg" alt="GitOps Deployment Framework">
-                    </div>
-                    <div class="project-info">
-                        <h3>GitOps Deployment Framework</h3>
-                        <p>Built a GitOps-based deployment framework using ArgoCD and Helm for managing applications across multiple Kubernetes clusters.</p>
-                        <div class="project-tech">
-                            <span>ArgoCD</span>
-                            <span>GitOps</span>
-                            <span>Helm</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="cloud automation">
-                    <div class="project-img">
-                        <img src="assets/images/projects/project5.jpg" alt="Infrastructure Monitoring Dashboard">
-                    </div>
-                    <div class="project-info">
-                        <h3>Infrastructure Monitoring Dashboard</h3>
-                        <p>Developed a comprehensive monitoring solution using Prometheus, Grafana, and Alertmanager for real-time infrastructure insights.</p>
-                        <div class="project-tech">
-                            <span>Prometheus</span>
-                            <span>Grafana</span>
-                            <span>Alertmanager</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="cloud kubernetes">
-                    <div class="project-img">
-                        <img src="assets/images/projects/project6.jpg" alt="Auto-scaling Microservices Platform">
-                    </div>
-                    <div class="project-info">
-                        <h3>Auto-scaling Microservices Platform</h3>
-                        <p>Designed a platform for automatically scaling microservices based on traffic patterns using Kubernetes HPA and custom metrics.</p>
-                        <div class="project-tech">
-                            <span>Kubernetes</span>
-                            <span>HPA</span>
-                            <span>Prometheus</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="https://github.com/ManavKakani/Box-Integration" target="_blank" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>

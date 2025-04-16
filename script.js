@@ -287,7 +287,7 @@ function sendEmail(event) {
     
     // Use EmailJS service to send the email
     // You need to sign up at emailjs.com and replace these with your actual service ID, template ID, and user ID
-    emailjs.send('service_id', 'template_id', formData, 'user_id')
+    emailjs.send('service_5fp1gvp', 'template_bg20l4o', formData, 'awP9Lv_nECrjeonof')
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             showFormStatus('Your message has been sent successfully!', 'success');
